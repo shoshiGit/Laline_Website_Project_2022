@@ -1,0 +1,97 @@
+
+#header{grid-area:header;}
+#form{grid-area:form;}
+#creditCard{grid-area:creditCard;}
+#table{grid-area: table;} 
+#footer{grid-area:footer;}
+#nav{grid-area: nav;}
+
+#title{grid-area:title;}
+.page{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+    'header header header header header header header header header'
+    'nav nav nav nav nav nav nav nav nav'
+    '. . title title title title . . . '
+    'form form form form . table table table .'  
+    'footer footer footer footer footer footer footer footer footer'
+}
+#title{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-size:x-large;
+}
+input[type=text],[type=number],
+[type=date],[type=time], [type=password], [type=tel], [list="inputpremiumList"] , 
+[list="inputsmellsList"] , [list="inputpresentList"] {
+    width: 69%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #008000;;
+  }
+  input[type=submit],[type=reset]{
+    background-color: rgb(255, 77, 124);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+  form label ,h2,h3{
+    text-align: center;
+      font-size: medium;
+      font-family: "Open Sans";
+  }
+  #form{
+      padding-left: 10%;
+      padding-right: 10%;
+   margin: auto;
+     background-color: rgb(227, 224, 224);
+  }
+ table ,th, td{
+    border-collapse: collapse;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    font-family: "Open Sans";
+} 
+ tr:hover{
+    background-color:pink;
+}
+ #creditCard{
+    font-family: "Open Sans";
+    background-color:#8b99a3;
+}  
+  #cctext{
+    margin:5%;
+}
+ #iframecc{
+    height:100%;
+    width:75%;
+}
+@media only screen and (max-width: 1050px){
+         .page{
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas:
+            'header header header header header header header header header'
+            '. . title title title title . . . '
+            '. form form form form form form form .'
+            '. table table table table table table table .'
+            'footer footer footer footer footer footer footer footer footer'
+        }
+          #table{
+              margin-top: 5%;
+              margin-bottom: 5%;
+         }
+         #iframecc{
+            height:100%;
+            width:100%;
+        }
+       
+    }
+
